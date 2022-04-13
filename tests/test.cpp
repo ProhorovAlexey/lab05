@@ -17,13 +17,13 @@ EXPECT_EQ(b.GetBalance(), 150000);
 
 }
 
-TEST(Account, id){
-Account a(12345, 999999);
-Account b(23456, 1000000);
+// TEST(Account, id){
+// Account a(12345, 999999);
+// Account b(23456, 1000000);
 
-EXPECT_EQ(a.id(), 12345);
-EXPECT_EQ(b.id(), 23456);
-}
+// EXPECT_EQ(a.id(), 12345);
+// EXPECT_EQ(b.id(), 23456);
+// }
 
 TEST(Account, lock){
 Account a(333, 777);
