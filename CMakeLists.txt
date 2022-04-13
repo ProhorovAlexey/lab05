@@ -5,18 +5,18 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 project(banking)
 
-set(LIBS ${CMAKE_CURRENT_SOURCE_DIR}/banking/Transaction.cpp ${CMAKE_CURRENT_SOURCE_DIR}/banking/Account.cpp)
+set(LIBS banking/Transaction.cpp banking/Account.cpp)
 
 add_library(${PROJECT_NAME} ${LIBS})
 
-include_directories(${PROJECT_NAME} ${CMAKE_CURRENT_SOURCE_DIR}/include)
+include_directories(${PROJECT_NAME} include)
 
 option(BUILD_TESTS "Builds tests" ON)
 
 if(BUILD_TESTS)
   enable_testing()
-  add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/third-party/gtest)
-  add_executable(tests ${CMAKE_CURRENT_SOURCE_DIR}/tests/test.cpp)
+  add_subdirectory(third-party/gtest)
+  add_executable(tests tests/test.cpp)
   target_link_libraries(tests ${PROJECT_NAME} gtest_main)
   add_test(NAME unit_test COMMAND tests)
 endif()
