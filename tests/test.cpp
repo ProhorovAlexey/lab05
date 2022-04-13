@@ -7,7 +7,8 @@ TEST(Account, balance){
 Account a(1010203, 3400);
 Account b(1012234, 100000);
 
-EXPECT_EQ(a.GetBalance() + b.GetBalance(), 103400);
+EXPECT_EQ(a.GetBalance(), 3400);
+EXPECT_EQ(b.GetBalance(), 100000);
 
 b.Lock();
 b.ChangeBalance(50000);
