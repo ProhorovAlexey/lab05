@@ -48,5 +48,5 @@ TEST(Transaction, fee){
   EXPECT_FALSE(transaction.Make(c, a, 500));
   EXPECT_EQ(transaction.fee(), 1);
   transaction.set_fee(100);
-  EXPECT_FALSE(transaction.Make(a, b, 1999));
+  EXPECT_FALSE(transaction.Make(a, b, 199));
 }
