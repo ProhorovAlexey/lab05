@@ -64,6 +64,7 @@ TEST(Transaction, exeptions){
         EXPECT_EQ(error.what(), std::string("too small"));
     } catch (...){
         FAIL() << "expected std::logic_error";
+    }
     try {
         transaction.Make(a, c, 1337);
         FAIL() << "expected std::logic_error";
