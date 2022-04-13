@@ -1,3 +1,4 @@
+[![Coverage Status](https://coveralls.io/repos/github/ProhorovAlexey/lab05/badge.svg)](https://coveralls.io/github/ProhorovAlexey/lab05)
 ## Laboratory work V
 
 Данная лабораторная работа посвещена изучению фреймворков для тестирования на примере **GTest**
